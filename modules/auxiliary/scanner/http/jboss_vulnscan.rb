@@ -52,12 +52,9 @@ class MetasploitModule < Msf::Auxiliary
       end
 
       apps = [
-        '/jmx-console/HtmlAdaptor',
-        '/status',
-        '/web-console/ServerInfo.jsp',
-        # apps added per Patrick Hof
-        '/web-console/Invoker',
         '/invoker/JMXInvokerServlet'
+        '/web-console/Invoker',
+        '/jmx-console/HtmlAdaptor',
       ]
 
       print_status("#{rhost}:#{rport} Checking http...")
